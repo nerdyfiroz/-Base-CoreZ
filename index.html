@@ -106,6 +106,8 @@ section {
   padding: 40px;
   border: 1px solid #22286b;
 }
+  
+<a href="#gallery" class="btn-outline">NFT Gallery</a>
 
 /* ---------- GALLERY ---------- */
 .gallery {
@@ -130,22 +132,20 @@ section {
 }
 
 .nft {
-  border-radius: 16px;
+  border-radius: 14px;
   overflow: hidden;
   border: 1px solid #2a2f70;
   background: #0b0e24;
-  transition: 0.35s;
+  aspect-ratio: 1 / 1; /* forces square short frame */
 }
 
 .nft img {
   width: 100%;
+  height: 100%;
+  object-fit: cover; /* crops instead of loading full size */
   display: block;
 }
 
-.nft:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 0 35px rgba(124,243,255,.4);
-}
 
 /* ---------- FOOTER ---------- */
 footer {
@@ -313,6 +313,11 @@ footer {
 <footer>
   © 2025 BaseCorez • Pixel Art 
 </footer>
-
+{
+  background:
+    radial-gradient(circle at 20% 20%, rgba(124,243,255,0.08), transparent 40%),
+    radial-gradient(circle at 80% 30%, rgba(155,124,255,0.08), transparent 40%),
+    linear-gradient(180deg, #050612, #07091a);
+}
 </body>
 </html>
