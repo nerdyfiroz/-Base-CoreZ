@@ -110,9 +110,23 @@ section {
 /* ---------- GALLERY ---------- */
 .gallery {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-template-columns: repeat(3, 1fr); /* 3 columns */
+  grid-auto-rows: auto;
   gap: 22px;
   margin-top: 30px;
+}
+
+/* Responsive behavior */
+@media (max-width: 1024px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
 }
 
 .nft {
@@ -230,7 +244,7 @@ footer {
 </section>
   <section id="projects">
   <div class="card">
-    <h2>Featured Project</h2>
+    <h2>Portfolio</h2>
 
     <div class="project-card">
       <h3>WizzleOrb</h3>
@@ -243,9 +257,9 @@ footer {
       </p>
 
       <p>
-        Each WizzleOrb is generated through code, embracing unpredictability
-        while maintaining a cohesive visual language inspired by retro digital culture
-        and modern Web3 experimentation.
+        A total of 1111 hand made pixel Wizzleorb's entering the wizard universe !
+       Each an every 32/32 pieces have own energy, unique attribute,
+       pieces carry wizards intensity spirit!
       </p>
 
       <a href="https://www.wizzleorb.xyz/" target="_blank" class="project-btn">
@@ -255,19 +269,22 @@ footer {
   </div>
 </section>
 
-<section id="gallery">
-  <div class="card">
-    <h2>NFT Gallery</h2>
+<div class="gallery">
+  <div class="nft"><img src="nft1.jpg"></div>
+  <div class="nft"><img src="nft2.jpg"></div>
+  <div class="nft"><img src="nft3.jpg"></div>
+  <div class="nft"><img src="nft4.jpg"></div>
 
-    <div class="gallery">
-      <div class="nft"><img src="nft1.jpg" alt="NFT Artwork 1"></div>
-      <div class="nft"><img src="nft2.jpg" alt="NFT Artwork 2"></div>
-      <div class="nft"><img src="nft3.jpg" alt="NFT Artwork 3"></div>
-      <div class="nft"><img src="nft4.jpg" alt="NFT Artwork 4"></div>
-      <div class="nft"><img src="nft5.jpg" alt="NFT Artwork 5"></div>
-    </div>
-  </div>
-</section>
+  <div class="nft"><img src="nft5.jpg"></div>
+  <div class="nft"><img src="nft6.jpg"></div>
+  <div class="nft"><img src="nft7.jpg"></div>
+  <div class="nft"><img src="nft8.jpg"></div>
+
+  <div class="nft"><img src="nft9.jpg"></div>
+  <div class="nft"><img src="nft10.jpg"></div>
+  <div class="nft"><img src="nft11.jpg"></div>
+  <div class="nft"><img src="nft12.jpg"></div>
+</div>
 
 <footer>
   © 2025 BaseCorez • Pixel Art 
