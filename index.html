@@ -1,234 +1,277 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>BaseCorez — NFT Artist</title>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BaseCorez — Pixel NFT Artist</title>
 
-  <!-- SEO -->
-  <meta name="description" content="BaseCorez — NFT Artist exploring digital art, culture, and blockchain creativity." />
-  <meta name="keywords" content="BaseCorez, NFT Artist, Digital Art, Web3, Blockchain, NFTs" />
-  <meta name="author" content="BaseCorez" />
+<!-- SEO -->
+<meta name="description" content="BaseCorez — Pixel NFT Artist blending retro pixels with blockchain-native creativity." />
+<meta name="keywords" content="Pixel NFT, NFT Artist, Blockchain Art, Web3, BaseCorez" />
 
-  <!-- Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+<!-- Font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
-  <style>
-    :root {
-      --bg: #0b0b0f;
-      --card: #14141c;
-      --text: #ffffff;
-      --muted: #b3b3c6;
-      --accent: #4da3ff;
-      --glow: rgba(77, 163, 255, 0.35);
-    }
+<style>
+:root {
+  --bg: #06070c;
+  --card: #0f1220;
+  --accent: #7cf3ff;
+  --accent2: #9b7cff;
+  --text: #ffffff;
+  --muted: #b8bdd9;
+}
 
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-    body {
-      font-family: 'Inter', sans-serif;
-      background: radial-gradient(circle at top, #10101a, var(--bg));
-      color: var(--text);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
+body {
+  font-family: Inter, sans-serif;
+  background: radial-gradient(circle at top, #0c1030, var(--bg));
+  color: var(--text);
+  min-height: 100vh;
+}
 
-    header {
-      width: 100%;
-      padding: 80px 20px 60px;
-      text-align: center;
-    }
+/* ---------- HEADER ---------- */
+header {
+  text-align: center;
+  padding: 90px 20px 60px;
+  animation: fadeUp 1s ease forwards;
+}
 
-    h1 {
-      font-size: clamp(2.5rem, 5vw, 3.5rem);
-      letter-spacing: -1px;
-      margin-bottom: 12px;
-    }
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid var(--accent);
+  box-shadow:
+    0 0 25px rgba(124,243,255,.6),
+    0 0 60px rgba(155,124,255,.3);
+  margin-bottom: 24px;
+  animation: float 4s ease-in-out infinite;
+}
 
-    .tagline {
-      color: var(--muted);
-      font-size: 1.05rem;
-      max-width: 620px;
-      margin: 0 auto 28px;
-      line-height: 1.6;
-    }
+h1 {
+  font-size: 3rem;
+  margin-bottom: 12px;
+}
 
-    .actions {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-    }
+.tagline {
+  max-width: 700px;
+  margin: 0 auto 28px;
+  color: var(--muted);
+  line-height: 1.7;
+}
 
-    .btn {
-      padding: 12px 26px;
-      border-radius: 999px;
-      font-weight: 600;
-      text-decoration: none;
-      transition: all 0.25s ease;
-      border: 1px solid transparent;
-    }
+.actions a {
+  display: inline-block;
+  margin: 6px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
 
-    .btn-primary {
-      background: linear-gradient(135deg, var(--accent), #7ab8ff);
-      color: #000;
-      box-shadow: 0 0 28px var(--glow);
-    }
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #000;
+  box-shadow: 0 0 25px rgba(124,243,255,.5);
+}
 
-    .btn-primary:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 0 42px var(--glow);
-    }
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
 
-    .btn-outline {
-      border: 1px solid #2a2a3d;
-      color: var(--text);
-      background: transparent;
-    }
+.btn-outline {
+  border: 1px solid #2b3160;
+  color: var(--text);
+}
 
-    .btn-outline:hover {
-      background: #1a1a28;
-    }
+/* ---------- SECTIONS ---------- */
+section {
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  padding: 40px 20px;
+  animation: fadeUp 1.2s ease forwards;
+}
 
-    main {
-      width: 100%;
-      max-width: 1000px;
-      padding: 0 20px 80px;
-    }
+.card {
+  background: linear-gradient(180deg, #12163a, var(--card));
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid #22286b;
+}
 
-    .section {
-      background: var(--card);
-      border-radius: 18px;
-      padding: 40px;
-      margin-bottom: 30px;
-      border: 1px solid #1f1f30;
-    }
+/* ---------- GALLERY ---------- */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+  margin-top: 30px;
+}
 
-    .section h2 {
-      font-size: 1.6rem;
-      margin-bottom: 14px;
-    }
+.nft {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #2a2f70;
+  background: #0b0e24;
+  transition: 0.35s;
+}
 
-    .section p {
-      color: var(--muted);
-      line-height: 1.7;
-      font-size: 1rem;
-    }
+.nft img {
+  width: 100%;
+  display: block;
+}
 
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 20px;
-    }
+.nft:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 0 35px rgba(124,243,255,.4);
+}
 
-    .card {
-      background: #10101a;
-      border-radius: 14px;
-      padding: 24px;
-      border: 1px solid #1f1f30;
-      transition: transform 0.25s ease;
-    }
+/* ---------- FOOTER ---------- */
+footer {
+  text-align: center;
+  padding: 28px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border-top: 1px solid #1e245a;
+}
 
-    .card:hover {
-      transform: translateY(-4px);
-    }
+/* ---------- ANIMATIONS ---------- */
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
 
-    .card h3 {
-      margin-bottom: 8px;
-      font-size: 1.1rem;
-    }
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(25px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+  .project-card {
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 18px;
+  background: linear-gradient(160deg, #12163a, #0b0e24);
+  border: 1px solid #2a2f70;
+  box-shadow: 0 0 30px rgba(124,243,255,.15);
+}
 
-    .card p {
-      font-size: 0.95rem;
-    }
+.project-card h3 {
+  font-size: 1.4rem;
+  margin-bottom: 12px;
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-    footer {
-      margin-top: auto;
-      width: 100%;
-      text-align: center;
-      padding: 24px 12px;
-      color: var(--muted);
-      font-size: 0.85rem;
-      border-top: 1px solid #1f1f30;
-    }
+.project-card p {
+  color: var(--muted);
+  line-height: 1.7;
+  margin-bottom: 14px;
+}
 
-    @media (max-width: 600px) {
-      header {
-        padding-top: 60px;
-      }
-      .section {
-        padding: 28px;
-      }
-    }
-  </style>
+.project-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  color: #000;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  box-shadow: 0 0 20px rgba(124,243,255,.5);
+  transition: 0.3s;
+}
+
+.project-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 35px rgba(124,243,255,.8);
+}
+
+</style>
 </head>
 
 <body>
 
-  <header>
-    <h1>BaseCorez</h1>
-    <p class="tagline">
-      NFT Artist exploring digital identity, on-chain culture, and creative expression
-      through blockchain-native art.
+<header>
+  <!-- PROFILE IMAGE (FIXED) -->
+  <img src="profile.jpg" alt="BaseCorez Pixel NFT Avatar" class="profile-pic">
+
+  <h1>BaseCorez</h1>
+
+  <p class="tagline">
+    Pixel NFT Artist crafting retro-inspired digital identities on the blockchain.
+    Each creation blends nostalgia, code, and decentralized culture into timeless on-chain art.
+  </p>
+
+  <div class="actions">
+    <a href="https://x.com/BaseCorez" target="_blank" class="btn-primary">Follow on X</a>
+    <a href="#gallery" class="btn-outline">View NFTs</a>
+  </div>
+</header>
+
+<section>
+  <div class="card">
+    <h2>About the Artist</h2>
+    <p>
+      BaseCorez is a pixel-focused NFT creator inspired by early digital art,
+      cyber culture, and blockchain innovation. Every pixel is placed with intent,
+      transforming simple forms into powerful on-chain identities.
+      <br><br>
+      The work explores ownership, individuality, and permanence in Web3 —
+      where art lives forever on the blockchain.
     </p>
-    <div class="actions">
-      <a href="https://x.com/BaseCorez" target="_blank" class="btn btn-primary">
-        Follow on X
-      </a>
-      <a href="#about" class="btn btn-outline">
-        Explore
+  </div>
+</section>
+  <section id="projects">
+  <div class="card">
+    <h2>Featured Project</h2>
+
+    <div class="project-card">
+      <h3>WizzleOrb</h3>
+
+      <p>
+        <strong>WizzleOrb</strong> is an original on-chain generative NFT project
+        created by BaseCorez. Built with a deep appreciation for pixel aesthetics
+        and blockchain permanence, the project explores randomness, identity,
+        and algorithmic art living fully on-chain.
+      </p>
+
+      <p>
+        Each WizzleOrb is generated through code, embracing unpredictability
+        while maintaining a cohesive visual language inspired by retro digital culture
+        and modern Web3 experimentation.
+      </p>
+
+      <a href="https://www.wizzleorb.xyz/" target="_blank" class="project-btn">
+        Visit Project →
       </a>
     </div>
-  </header>
+  </div>
+</section>
 
-  <main>
-    <section id="about" class="section">
-      <h2>About</h2>
-      <p>
-        BaseCorez is a digital NFT artist focused on minimal, expressive,
-        and culture-driven artwork. Each piece reflects the evolving
-        relationship between technology, identity, and decentralized
-        creativity.
-      </p>
-    </section>
+<section id="gallery">
+  <div class="card">
+    <h2>NFT Gallery</h2>
 
-    <section class="section">
-      <h2>Focus Areas</h2>
-      <div class="grid">
-        <div class="card">
-          <h3>NFT Art</h3>
-          <p>Original on-chain artworks crafted for the Web3 ecosystem.</p>
-        </div>
-        <div class="card">
-          <h3>Blockchain Culture</h3>
-          <p>Visual narratives inspired by decentralization and digital ownership.</p>
-        </div>
-        <div class="card">
-          <h3>Creative Identity</h3>
-          <p>Exploring individuality, minimalism, and abstract expression.</p>
-        </div>
-      </div>
-    </section>
+    <div class="gallery">
+      <div class="nft"><img src="nft1.jpg" alt="NFT Artwork 1"></div>
+      <div class="nft"><img src="nft2.jpg" alt="NFT Artwork 2"></div>
+      <div class="nft"><img src="nft3.jpg" alt="NFT Artwork 3"></div>
+      <div class="nft"><img src="nft4.jpg" alt="NFT Artwork 4"></div>
+      <div class="nft"><img src="nft5.jpg" alt="NFT Artwork 5"></div>
+    </div>
+  </div>
+</section>
 
-    <section class="section">
-      <h2>Connect</h2>
-      <p>
-        Follow BaseCorez on X to stay updated on new drops, ideas,
-        and experiments in NFT art.
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 BaseCorez • Built for Web3 • Powered by Firoz
-  </footer>
+<footer>
+  © 2025 BaseCorez • Pixel Art 
+</footer>
 
 </body>
 </html>
