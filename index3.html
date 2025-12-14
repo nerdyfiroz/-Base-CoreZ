@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>BaseCorez — Pixel NFT Artist</title>
+
+<meta name="description" content="BaseCorez — Pixel NFT Artist blending retro pixels with blockchain-native creativity." />
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --accent: #7cf3ff;
+  --accent2: #9b7cff;
+  --text: #ffffff;
+  --muted: #b8bdd9;
+}
+
+* { margin:0; padding:0; box-sizing:border-box; }
+
+body {
+  font-family: Inter, sans-serif;
+  color: var(--text);
+  background: #050612;
+  overflow-x: hidden;
+}
+
+/* ===== BACKGROUND CANVAS ===== */
+#bg-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: -2;
+}
+
+/* ===== LAYOUT ===== */
+header {
+  text-align: center;
+  padding: 90px 20px 60px;
+}
+
+.profile-pic {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+  border: 4px solid var(--accent);
+  box-shadow: 0 0 35px rgba(124,243,255,.6);
+  margin-bottom: 24px;
+}
+
+h1 { font-size: 3rem; margin-bottom: 12px; }
+
+.tagline {
+  max-width: 720px;
+  margin: 0 auto 28px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.actions a {
+  display: inline-block;
+  margin: 6px;
+  padding: 12px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  color: #000;
+}
+
+.btn-outline {
+  border: 1px solid #2b3160;
+  color: var(--text);
+}
+
+/* ===== WALLET ===== */
+.wallet {
+  margin-top: 18px;
+  color: var(--muted);
+}
+
+.wallet a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* ===== SECTIONS ===== */
+section {
+  max-width: 1100px;
+  margin: 0 auto 50px;
+  padding: 40px 20px;
+}
+
+.card {
+  background: rgba(15,18,32,0.85);
+  backdrop-filter: blur(6px);
+  border-radius: 20px;
+  padding: 40px;
+  border: 1px solid #22286b;
+}
+
+/* ===== PROJECT ===== */
+.project-card {
+  margin-top: 20px;
+  padding: 30px;
+  border-radius: 18px;
+  background: rgba(18,22,58,0.85);
+  border: 1px solid #2a2f70;
+}
+
+.project-card h3 {
+  background: linear-gradient(90deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* ===== NFT GALLERY ===== */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.nft {
+  height: 200px;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #2a2f70;
+}
+
+.nft img {
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  text-align: center;
+  padding: 28px;
+  font-size: 0.85rem;
+  color: var(--muted);
+  border-top: 1px solid #1e245a;
+}
+</style>
+</head>
+
+<body>
+
+<canvas id="bg-canvas"></canvas>
+
+<header>
+  <img src="profile.jpg" class="profile-pic" alt="BaseCorez">
+
+  <h1>BaseCorez</h1>
+
+  <p class="tagline">
+    Pixel NFT Artist crafting retro-inspired digital identities on the blockchain.
+    Each creation blends nostalgia vibes and decentralized culture into timeless on-chain art.
+  </p>
+
+  <div class="actions">
+    <a href="https://x.com/BaseCorez" class="btn-primary" target="_blank">Follow on X</a>
+    <a href="https://opensea.io/0xdE7BF81D0B284b2437c7785b47e107B663877D00" class="btn-outline" target="_blank">OpenSea</a>
+    <a href="https://magiceden.io/u/0xdE7BF81D0B284b2437c7785b47e107B663877D00" class="btn-outline" target="_blank">Magic Eden</a>
+  </div>
+
+  <div class="wallet">
+    Base Wallet:
+    <a href="https://basescan.org/address/0xdE7BF81D0B284b2437c7785b47e107B663877D00" target="_blank">
+      BasecoreZ.base.eth
+    </a>
+  </div>
+</header>
+
+<section>
+  <div class="card">
+    <h2><strong>BaseCorez</strong></h2><strong>pixel artist</strong><br><br>
+    <p>
+      BaseCorez is a pixel-focused NFT creator inspired by early digital art,
+      cyber culture, and blockchain innovation. Every pixel is placed with intent,
+      transforming simple forms into powerful on-chain identities.
+      <br><br>
+      The work explores ownership, individuality, and permanence in Web3 —
+      where art lives forever on the blockchain.
+    </p>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>Portfolio</h2>
+
+    <div class="project-card">
+      <h3>WizzleOrb</h3>
+      <p>
+        <strong>WizzleOrb</strong> is an original on-chain generative NFT project
+        created by <strong>Pu0ka</strong>.
+      </p>
+      <p>
+        A total of 1111 hand made pixel Wizzleorb's entering the wizard universe !
+        Each an every 32/32 pieces have own energy, unique attribute,
+        pieces carry wizards intensity spirit!
+      </p>
+
+      <a href="https://www.wizzleorb.xyz/" class="btn-primary" target="_blank">Visit Project →</a>
+      <a href="https://x.com/Pu0ka" class="btn-primary" target="_blank">Follow on X</a>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="card">
+    <h2>NFT Gallery</h2>
+    <div class="gallery">
+      <div class="nft"><img src="nft1.jpg"></div>
+      <div class="nft"><img src="nft2.jpg"></div>
+      <div class="nft"><img src="nft3.jpg"></div>
+      <div class="nft"><img src="nft4.jpg"></div>
+      <div class="nft"><img src="nft5.jpg"></div>
+      <div class="nft"><img src="nft6.jpg"></div>
+      <div class="nft"><img src="nft7.jpg"></div>
+      <div class="nft"><img src="nft8.jpg"></div>
+      <div class="nft"><img src="nft9.jpg"></div>
+      <div class="nft"><img src="nft10.jpg"></div>
+      <div class="nft"><img src="nft11.jpg"></div>
+      <div class="nft"><img src="nft12.jpg"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 BaseCorez • Pixel Art
+</footer>
+
+<!-- ===== ADVANCED WEB3 SPHERE SCRIPT ===== -->
+<script>
+const canvas = document.getElementById("bg-canvas");
+const ctx = canvas.getContext("2d");
+
+let w, h, mouseX = 0, mouseY = 0;
+function resize() {
+  w = canvas.width = window.innerWidth;
+  h = canvas.height = window.innerHeight;
+}
+window.addEventListener("resize", resize);
+resize();
+
+window.addEventListener("mousemove", e => {
+  mouseX = (e.clientX / w - 0.5) * 2;
+  mouseY = (e.clientY / h - 0.5) * 2;
+});
+
+const points = [];
+const count = 160;
+const radius = 200;
+
+for (let i = 0; i < count; i++) {
+  const a = Math.random() * Math.PI * 2;
+  const b = Math.acos(2 * Math.random() - 1);
+  points.push({
+    x: radius * Math.sin(b) * Math.cos(a),
+    y: radius * Math.sin(b) * Math.sin(a),
+    z: radius * Math.cos(b)
+  });
+}
+
+let angle = 0;
+function animate() {
+  ctx.clearRect(0,0,w,h);
+  ctx.translate(w/2, h/2);
+  angle += 0.003;
+
+  for (let i = 0; i < points.length; i++) {
+    const p = points[i];
+    const rx = angle + mouseX * 0.5;
+    const ry = angle + mouseY * 0.5;
+
+    const x = p.x * Math.cos(rx) - p.z * Math.sin(rx);
+    const z = p.x * Math.sin(rx) + p.z * Math.cos(rx);
+    const y = p.y * Math.cos(ry) - z * Math.sin(ry);
+
+    const scale = 500 / (500 + z);
+    const px = x * scale;
+    const py = y * scale;
+
+    ctx.fillStyle = "rgba(124,243,255,0.8)";
+    ctx.beginPath();
+    ctx.arc(px, py, 2, 0, Math.PI*2);
+    ctx.fill();
+
+    for (let j = i + 1; j < points.length; j++) {
+      const p2 = points[j];
+      const dx = p.x - p2.x;
+      const dy = p.y - p2.y;
+      const dz = p.z - p2.z;
+      const dist = Math.sqrt(dx*dx + dy*dy + dz*dz);
+      if (dist < 60) {
+        ctx.strokeStyle = "rgba(124,243,255,0.08)";
+        ctx.beginPath();
+        ctx.moveTo(px, py);
+        ctx.lineTo(p2.x * scale, p2.y * scale);
+        ctx.stroke();
+      }
+    }
+  }
+  ctx.setTransform(1,0,0,1,0,0);
+  requestAnimationFrame(animate);
+}
+animate();
+</script>
+
+</body>
+</html>
