@@ -14,7 +14,6 @@
 
 <style>
 :root {
-  --bg: #06070c;
   --card: #0f1220;
   --accent: #7cf3ff;
   --accent2: #9b7cff;
@@ -28,7 +27,7 @@
   box-sizing: border-box;
 }
 
-/* ---------- BACKGROUND (CRYPTO / NFT ANIMATED) ---------- */
+/* ===== WORKING ANIMATED CRYPTO / NFT BACKGROUND ===== */
 body {
   font-family: Inter, sans-serif;
   color: var(--text);
@@ -44,13 +43,13 @@ body::before {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(circle at 20% 30%, rgba(124,243,255,0.18), transparent 40%),
-    radial-gradient(circle at 80% 70%, rgba(155,124,255,0.18), transparent 40%),
+    radial-gradient(circle at 15% 25%, rgba(124,243,255,0.25), transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(155,124,255,0.25), transparent 45%),
     linear-gradient(180deg, #050612, #07091a);
-  animation: bgFloat 20s ease-in-out infinite alternate;
+  animation: bgFloat 18s ease-in-out infinite alternate;
 }
 
-/* ---------- HEADER ---------- */
+/* ===== HEADER ===== */
 header {
   text-align: center;
   padding: 90px 20px 60px;
@@ -63,9 +62,7 @@ header {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid var(--accent);
-  box-shadow:
-    0 0 25px rgba(124,243,255,.6),
-    0 0 60px rgba(155,124,255,.3);
+  box-shadow: 0 0 30px rgba(124,243,255,.6);
   margin-bottom: 24px;
   animation: float 4s ease-in-out infinite;
 }
@@ -76,7 +73,7 @@ h1 {
 }
 
 .tagline {
-  max-width: 700px;
+  max-width: 720px;
   margin: 0 auto 28px;
   color: var(--muted);
   line-height: 1.7;
@@ -98,16 +95,12 @@ h1 {
   box-shadow: 0 0 25px rgba(124,243,255,.5);
 }
 
-.btn-primary:hover {
-  transform: translateY(-3px);
-}
-
 .btn-outline {
   border: 1px solid #2b3160;
   color: var(--text);
 }
 
-/* ---------- WALLET ---------- */
+/* ===== WALLET ===== */
 .wallet {
   margin-top: 18px;
   font-size: 0.95rem;
@@ -121,11 +114,7 @@ h1 {
   margin-left: 6px;
 }
 
-.wallet a:hover {
-  text-decoration: underline;
-}
-
-/* ---------- SECTIONS ---------- */
+/* ===== SECTIONS ===== */
 section {
   max-width: 1100px;
   margin: 0 auto 50px;
@@ -140,7 +129,7 @@ section {
   border: 1px solid #22286b;
 }
 
-/* ---------- PROJECT ---------- */
+/* ===== PROJECT ===== */
 .project-card {
   margin-top: 20px;
   padding: 30px;
@@ -163,11 +152,12 @@ section {
   margin-bottom: 14px;
 }
 
-/* ---------- NFT GALLERY ---------- */
+/* ===== NFT GALLERY ===== */
 .gallery {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
+  margin-top: 24px;
 }
 
 .nft {
@@ -176,7 +166,6 @@ section {
   overflow: hidden;
   border: 1px solid #2a2f70;
   background: #0b0e24;
-  transition: transform .25s ease, box-shadow .25s ease;
 }
 
 .nft img {
@@ -185,17 +174,7 @@ section {
   object-fit: cover;
 }
 
-.nft:hover {
-  transform: translateY(-4px) scale(1.03);
-  box-shadow: 0 0 25px rgba(124,243,255,.35);
-}
-
-/* ---------- NFT ACTIVITY ---------- */
-#nft-activity iframe {
-  background: #0b0e24;
-}
-
-/* ---------- FOOTER ---------- */
+/* ===== FOOTER ===== */
 footer {
   text-align: center;
   padding: 28px;
@@ -204,7 +183,7 @@ footer {
   border-top: 1px solid #1e245a;
 }
 
-/* ---------- ANIMATIONS ---------- */
+/* ===== ANIMATIONS ===== */
 @keyframes float {
   0%,100% { transform: translateY(0); }
   50% { transform: translateY(-10px); }
@@ -217,7 +196,7 @@ footer {
 
 @keyframes bgFloat {
   from { transform: translate(0,0); }
-  to { transform: translate(-40px,-60px); }
+  to { transform: translate(-50px,-70px); }
 }
 </style>
 </head>
@@ -247,7 +226,67 @@ footer {
   </div>
 </header>
 
-<!-- CONTENT CONTINUES EXACTLY AS YOU WROTE IT -->
+<section>
+  <div class="card">
+    <h2><strong>BaseCorez</strong></h2><strong>pixel artist</strong><br><br>
+    <p>
+      BaseCorez is a pixel-focused NFT creator inspired by early digital art,
+      cyber culture, and blockchain innovation. Every pixel is placed with intent,
+      transforming simple forms into powerful on-chain identities.
+      <br><br>
+      The work explores ownership, individuality, and permanence in Web3 —
+      where art lives forever on the blockchain.
+    </p>
+  </div>
+</section>
+
+<section id="projects">
+  <div class="card">
+    <h2>Portfolio</h2>
+
+    <div class="project-card">
+      <h3>WizzleOrb</h3>
+      <p>
+        <strong>WizzleOrb</strong> is an original on-chain generative NFT project
+        created by <strong>Pu0ka</strong>. Built with a deep appreciation for pixel
+        aesthetics and blockchain permanence, the project explores randomness,
+        identity, and algorithmic art living fully on-chain.
+      </p>
+      <p>
+        A total of 1111 hand made pixel Wizzleorb's entering the wizard universe !
+        Each an every 32/32 pieces have own energy, unique attribute,
+        pieces carry wizards intensity spirit!
+      </p>
+      <a href="https://www.wizzleorb.xyz/" target="_blank" class="btn-primary">Visit Project →</a>
+      <a href="https://x.com/Pu0ka" target="_blank" class="btn-outline">Follow on X</a>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="card">
+    <h2>NFT Gallery</h2>
+
+    <div class="gallery">
+      <div class="nft"><img src="nft1.jpg" loading="lazy"></div>
+      <div class="nft"><img src="nft2.jpg" loading="lazy"></div>
+      <div class="nft"><img src="nft3.jpg" loading="lazy"></div>
+      <div class="nft"><img src="nft4.jpg" loading="lazy"></div>
+      <div class="nft"><img src="nft5.jpg" loading="lazy"></div>
+      <div class="nft"><img src="nft6.jpg" loading="lazy"></div>
+      <div class="nft"><img src="nft7.jpg" loading="lazy"></div>
+      <div class="nft"><img src="nft8.jpg" loading="lazy"></div>
+      <div class="nft"><img src="nft9.jpg" loading="lazy"></div>
+      <div class="nft"><img src="nft10.jpg" loading="lazy"></div>
+      <div class="nft"><img src="nft11.jpg" loading="lazy"></div>
+      <div class="nft"><img src="nft12.jpg" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © 2025 BaseCorez • Pixel Art • FK
+</footer>
 
 </body>
 </html>
