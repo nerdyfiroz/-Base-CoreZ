@@ -14,7 +14,6 @@
 
 <style>
 :root {
-  --card: #0f1220;
   --accent: #7cf3ff;
   --accent2: #9b7cff;
   --text: #ffffff;
@@ -27,7 +26,7 @@
   box-sizing: border-box;
 }
 
-/* ===== WORKING ANIMATED CRYPTO / NFT BACKGROUND ===== */
+/* ===== ANIMATED NFT / CRYPTO BACKGROUND ===== */
 body {
   font-family: Inter, sans-serif;
   color: var(--text);
@@ -43,8 +42,8 @@ body::before {
   inset: 0;
   z-index: -1;
   background:
-    radial-gradient(circle at 15% 25%, rgba(124,243,255,0.25), transparent 45%),
-    radial-gradient(circle at 85% 75%, rgba(155,124,255,0.25), transparent 45%),
+    radial-gradient(circle at 15% 25%, rgba(124,243,255,0.35), transparent 45%),
+    radial-gradient(circle at 85% 75%, rgba(155,124,255,0.35), transparent 45%),
     linear-gradient(180deg, #050612, #07091a);
   animation: bgFloat 18s ease-in-out infinite alternate;
 }
@@ -122,8 +121,14 @@ section {
   animation: fadeUp 1.2s ease forwards;
 }
 
+/* ===== GLASS CARD (IMPORTANT FIX) ===== */
 .card {
-  background: linear-gradient(180deg, #12163a, var(--card));
+  background: linear-gradient(
+    180deg,
+    rgba(18, 22, 58, 0.88),
+    rgba(15, 18, 32, 0.88)
+  );
+  backdrop-filter: blur(6px);
   border-radius: 20px;
   padding: 40px;
   border: 1px solid #22286b;
@@ -134,7 +139,11 @@ section {
   margin-top: 20px;
   padding: 30px;
   border-radius: 18px;
-  background: linear-gradient(160deg, #12163a, #0b0e24);
+  background: linear-gradient(
+    160deg,
+    rgba(18, 22, 58, 0.85),
+    rgba(11, 14, 36, 0.85)
+  );
   border: 1px solid #2a2f70;
 }
 
@@ -165,7 +174,7 @@ section {
   border-radius: 14px;
   overflow: hidden;
   border: 1px solid #2a2f70;
-  background: #0b0e24;
+  background: rgba(11, 14, 36, 0.9);
 }
 
 .nft img {
